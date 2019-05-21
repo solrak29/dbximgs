@@ -25,3 +25,11 @@ More enhancements to come...maybe.
 
 # contributing
 If you want to contribute that would be great to enhance this little test.
+
+# references
+
+* https://docs.galleria.io/article/18-quick-start
+* https://docs.galleria.io/article/139-optimize
+* http://dropbox.github.io/dropbox-sdk-js/Dropbox.html#filesListFolder__anchor
+* https://dropbox.github.io/gallerywithtagstutorial/?_tk=guides_lp&_ad=javascript_tutorial2&_camp=photo2
+* https://github.com/dropbox/nodegallerytutorial?_tk=guides_lp&_ad=javascript_tutorial1&_camp=photo
