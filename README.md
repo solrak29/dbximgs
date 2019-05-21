@@ -32,6 +32,10 @@ If you want to contribute that would be great to enhance this little test.
 * Look at lazy loading for high number of images.
 * Look at Gallaria themes (maybe some nicer ones are there).
 * Look at user management; where this can be users based.  The user hosting and users invited to see pics.
+* Allow users invited to upload based on permissions.
+* Have download options.
+* Fix picture orientation.
+* Allow videos and other formats.
 
 # references
 
