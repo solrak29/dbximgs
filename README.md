@@ -28,6 +28,11 @@ More enhancements to come...maybe.
 # contributing
 If you want to contribute that would be great to enhance this little test.
 
+## Todo
+* Look at lazy loading for high number of images.
+* Look at Gallaria themes (maybe some nicer ones are there).
+* Look at user management; where this can be users based.  The user hosting and users invited to see pics.
+
 # references
 
 * https://docs.galleria.io/article/18-quick-start
