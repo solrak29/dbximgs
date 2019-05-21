@@ -1,8 +1,10 @@
 # dbximgs
 Using DropBox samples; I created this so I can share images with friends.
 When you have a folder with lots of images and the friend you share the folder
-with does not have enough space (i.e. paid version), then they can't see
-you images.  So I created this little app based on the sample dbximgs from DropBox.
+with does not have enough space on DropBox (i.e. paid version), then they can't see
+your images.  
+
+So I created this little app based on the sample dbximgs from DropBox.
 
 # config.js
 You must provide a config.js for the parameters.
