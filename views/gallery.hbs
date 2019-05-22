@@ -2,15 +2,74 @@
 <html>
     <head>
         <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+        <style>
+.north {
+transform:rotate(0deg);
+-ms-transform:rotate(0deg); /* IE 9 */
+-webkit-transform:rotate(0deg); /* Safari and Chrome */
+}
+.west {
+transform:rotate(90deg);
+-ms-transform:rotate(90deg); /* IE 9 */
+-webkit-transform:rotate(90deg); /* Safari and Chrome */
+}
+.south {
+transform:rotate(180deg);
+-ms-transform:rotate(180deg); /* IE 9 */
+-webkit-transform:rotate(180deg); /* Safari and Chrome */
+    
+}
+.east {
+transform:rotate(270deg);
+-ms-transform:rotate(270deg); /* IE 9 */
+-webkit-transform:rotate(270deg); /* Safari and Chrome */
+}
+
+        </style>
+        <script>
+function orotate(id) {
+    console.log(id);
+    var val = id.getAttribute('style');
+    val = val.replace( 'transform: translate3d(0px, 0px, 0px)', 'transform:rotate(180deg)');
+    //id.setAttribute('style', 'transform:rotate(180deg)');
+    console.log(val);
+    id.setAttribute('style', val);
+
+}
+$("#rotate").on('click', function(){
+    console.log('testing');
+    alert("clicked");
+    var img = $("div").find("img");
+    if(img.hasClass('north')){
+        img.attr('class','west');
+    }else if(img.hasClass('west')){
+        img.attr('class','south');
+    }else if(img.hasClass('south')){
+        img.attr('class','east');
+    }else if(img.hasClass('east')){
+        img.attr('class','north');
+    }
+});
+        </script>
         <script src="/galleria/galleria-1.5.7.min.js"></script>
+        <link rel="stylesheet" href="/galleria/themes/classic/galleria.classic.css">
+        <script src="/galleria/themes/classic/galleria.classic.min.js"></script>	
         <script type='text/javascript' src='/javascripts/page.js'></script>
         <link rel="stylesheet" href="/stylesheets/page.css">
+        <script>
+            Galleria.configure({
+                dummy: '/images/noimage.jpg',
+                thumbnails: 'lazy'});
+            Galleria.on('image', function(e) {
+                e.imageTarget.addEventListener("click",function() {orotate(e.imageTarget)},true);
+            });
+        </script>
     </head>
     <body>
         <div class="galleria">
             {% raw %}
                 {{#each imgs}}
-                    <img src="{{this}}">
+                    <img class="north" src="{{this}}"  />
                 {{/each}}
             {% endraw %}
         </div>
